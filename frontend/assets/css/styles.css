@@ -1,0 +1,118 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.headline {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Show Card Styling */
+.show-card {
+    position: relative;
+    background-color: F2F2F2;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: relative;
+}
+
+.show-card h2 {
+    margin-top: 0;
+}
+
+.show-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+.bell{
+    height: 11px;
+    width: 11px;
+    margin-right:6px;
+}
+
+/* Timer Styling */
+.show-card .timer {
+    margin:10px;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Changed from right to left */
+    color: white;  /* Red */
+    font-weight: 500;
+    font-size: 13px;
+    background: #FF0000;
+    border-radius: 2px;
+    padding: 4px 9px 4px 9px;
+}
+
+/* Apply Button Styling */
+.show-card .apply-btn {
+    display: inline-block;
+    background-color: #FF0000;  /* Red */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    
+}
+
+.show-description {
+    margin: 10px 0 10px 0;
+    line-height: 150%;
+    font-size: 17px;
+    font-weight: 400;
+    display: -webkit-box; /* Required for line-clamp */
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-box-orient: vertical; /* Required for line-clamp */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds "..." for overflow */
+}
+
+
+/* Date Styling */
+.show-details {
+    display: flex;
+    
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px; /* Adds 20px space between items */
+}
+
+
+.show-details .date {
+    font-size: 0.7em;
+    color: #666;
+}
+
+.calend{
+    margin-right: 3px;
+    width: 12px;
+    height: 12px;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/TV-shows-app/frontend/assets/css/styles.css">
+    <title>TV Shows</title>
+</head>
+<body>
+    <h1 class="headline">Piesakies TV šoviem!</h1>
+    <div class="container" id="tv-shows">
+        <!-- TV Shows will be loaded here dynamically -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: '/TV-shows-app/backend/routes/api.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        var tvShows = response.data;
+                        var tvShowsHtml = '';
+                        tvShows.forEach(function(show) {
+                            var imageUrl = show.image;
+                            if (!imageUrl) {}
+                            tvShowsHtml += `
+                                <div class="show-card">
+                                    <div class="timer"><img class="bell" src="/TV-shows-app/frontend/assets/images/Asset6.svg">Vēl ${show.days_left} dienas</div>
+                                    <img src="${imageUrl}" alt="${show.title}" class="show-image">
+                                    <p class="show-description">${show.description}</p>
+                                    <div class="show-details">
+                                        <a href="#" class="apply-btn">Pieteikties!</a>
+                                        <span class="date"><img class="calend" src="/TV-shows-app/frontend/assets/images/Asset2.svg">${show.formatted_date}</span>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        $('#tv-shows').html(tvShowsHtml);
+                    }
+                },
+            });
+        });
+    </script>
+</body>
+</html>
