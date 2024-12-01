@@ -83,7 +83,6 @@ body {
     text-overflow: ellipsis;
 }
 
-
 /* Date Styling */
 .show-details {
     display: flex;
@@ -92,7 +91,6 @@ body {
     margin-top: 10px;
     gap: 20px;
 }
-
 
 .show-details .date {
     font-size: 0.7em;
