@@ -50,8 +50,8 @@ body {
     margin:10px;
     position: absolute;
     top: 10px;
-    left: 10px; /* Changed from right to left */
-    color: white;  /* Red */
+    left: 10px; 
+    color: white; 
     font-weight: 500;
     font-size: 13px;
     background: #FF0000;
@@ -62,7 +62,7 @@ body {
 /* Apply Button Styling */
 .show-card .apply-btn {
     display: inline-block;
-    background-color: #FF0000;  /* Red */
+    background-color: #FF0000;
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -76,11 +76,11 @@ body {
     line-height: 150%;
     font-size: 17px;
     font-weight: 400;
-    display: -webkit-box; /* Required for line-clamp */
-    -webkit-line-clamp: 3; /* Limits to 3 lines */
-    -webkit-box-orient: vertical; /* Required for line-clamp */
-    overflow: hidden; /* Hides overflowing text */
-    text-overflow: ellipsis; /* Adds "..." for overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -90,7 +90,7 @@ body {
     
     align-items: center;
     margin-top: 10px;
-    gap: 20px; /* Adds 20px space between items */
+    gap: 20px;
 }
 
 
