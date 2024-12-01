@@ -86,7 +86,6 @@ body {
 /* Date Styling */
 .show-details {
     display: flex;
-    
     align-items: center;
     margin-top: 10px;
     gap: 20px;
